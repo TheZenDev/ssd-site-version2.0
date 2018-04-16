@@ -1,0 +1,78 @@
+/* CSS for calendar */
+#inner_cal_div {
+    background-color: darkgray;
+}
+
+#inner_cal_div ul {
+    list-style-type: none;
+}
+
+.calendar {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+}
+
+.flex_calendar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+.flex_calendar div {
+    text-align: center;
+}
+
+.flex_calendar div ul {
+    padding: 5px;
+}
+/* maybe just use css grid instead */
+
+div {
+    margin: 5px;
+}
+
+.div-color {
+    background-color: lightblue;
+}
+
+.body-color {
+    background-color: lightgray;
+}
+
+.center-txt {
+    text-align: center;
+    border: 3px solid darkblue;
+}
+
+/* CSS for select menu */
+.select_dropdown {
+    display: none;
+}
+
+@media (max-width: 1080px) {
+    .nav_list     { display: none; }
+    .page_label     { display: none; }
+    .select_dropdown { display: inline-block; }
+  }
+
+.styled-select {
+    
+    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+    height: 29px;
+    overflow: hidden;
+    width: 240px;
+ }
+ .styled-select select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    width: 268px;
+ }
+ .black   { background-color: #000; }
+
+ .black select   { color: #fff; }

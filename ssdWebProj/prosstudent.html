@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico"
+    />
+    <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg"
+        color="#111" />
+    <title>CodePen - Bootstrap Transparent Responsive Navbar (Still Testing)</title>
+
+    <link rel="stylesheet" href="shared.scss">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        section {
+            background: darkblue;
+            color: grey;
+        }
+
+        .banner {
+            background-image: url("header.jpg");
+            min-height: 200px;
+        }
+
+        .banner .row {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .banner h1 {
+            color: white;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .banner h2 {
+            color: antiquewhite;
+            text-align: center;
+            padding-top: 15px;
+
+        }
+
+
+
+        /***********************************************************************
+        *  OPAQUE NAVBAR SECTION
+        ***********************************************************************/
+
+        .opaque-navbar {
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+            height: 60px;
+            border-bottom: 0px;
+            transition: background-color .5s ease 0s;
+        }
+
+        .opaque-navbar.opaque {
+            background-color: black;
+            height: 60px;
+            transition: background-color .5s ease 0s;
+        }
+
+        ul.dropdown-menu {
+            background-color: black;
+        }
+
+
+        @media (max-width: 992px) {
+            body {
+                background: white;
+            }
+            .opaque-navbar {
+                background-color: black;
+                height: 60px;
+                transition: background-color .5s ease 0s;
+            }
+
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+
+
+
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+
+</head>
+
+<body translate="no" class='body-color'>
+
+    <!--
+    ********************************************************************
+    * Responsive Transparent Navbar
+    ********************************************************************
+    -->
+    <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+        <div class="container">
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="index.html" style="color: grey;">SSD</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="nav navbar-nav pull-right nav_list">
+                    <li style="color: grey;">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <!--class="active"-->
+                    <li style="color: grey;">
+                        <a href="prosstudent.html">Prospective Students</a>
+                    </li>
+                    <li style="color: grey;">
+                        <a href="student.html">Current Students</a>
+                    </li>
+                    <li style="color: grey;">
+                        <a href="calendar.html">Course Calendar</a>
+                    </li>
+                    <li style="color: grey;">
+                        <a href="staff.html">Our Staff</a>
+                    </li>
+                    <li style="color: grey;">
+                        <a href="resources.html">Online Resources</a>
+                    </li>
+                    <li style="color: grey;">
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class='styled-select black select_dropdown'>
+                <select class='black-select' onchange="location = this.value;">
+                    <option class='white' value="/">Prospective Students</option>
+                    <option class='white' value="index.html">Home</option>
+                    <option class='white' value="student.html">Current Students</option>
+                    <option class='white' value="calendar.html">Course Calendar</option>
+                    <option class='white' value="staff.html">Our Staff</option>
+                    <option class='white' value="resources.html">Online Resources</option>
+                    <option class='white' value="contact.html">Contact Us</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <section class="banner">
+        <div class="container">
+            <h1>BCIT - SSD</h1>
+            <h2>Develop anything from scratch.</h2>
+            <div class="col-sm-12 mt-60 text-center">
+
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <h1 style="text-align: center; padding-top: 25px; padding-bottom: 25px;"> Prospective Students</h1>
+        <div class="row" style="margin-bottom: 75px;">
+            <div class="col-md-6 col-centered">
+                <img style="height: 250px; width: 50%; float: right; margin-top: 75px;" src="./images/bcit-building.jpg">
+            </div>
+            <div class="col-md-4 col-centered" style="display:block;">
+                <h3>Submission Requirements</h3>
+                <a href="https://www.bcit.ca/study/programs/699ccertt#entry">Check the BCIT website!</a>
+
+                <h3>Program Intake</h3>
+                <p>There is one yearly intake at the begining of September</p>
+
+                <h3>Program Length</h3>
+                <p>Septemeber 10 2018 to May 10 2019</p>
+
+                <h3>Campus Location</h3>
+                <p>BCIT Downtown Campus - 555 Seymour st. Vancouver, British Columbia</p>
+
+                <h3>How to Apply</h3>
+                <a href="https://www.bcit.ca/study/programs/699ccertt#entry">Click here to learn more!</a>
+            </div>
+        </div>
+    </div>
+    <h2 style="text-align: center;">State of the Art Facilities</h2>
+    <div class="row">
+        <div class="col-md-3 col-centered">
+
+        </div>
+        <div class="col-md-6 col-centered">
+            <img style="height: 90%; width: 100%; margin-top: 25px;" src="./images/breakroom.jpg">
+        </div>
+    </div>
+    <div class="container" style="margin:auto;">
+        <h1 style="text-align: center; padding-top: 25px; padding-bottom: 25px;"> Course Outlines</h1>
+        <div class="row" style="border-bottom: groove 5px royalblue;">
+            <div class="col-md-4 col-centered" style="display: inline-block">
+                <img src="./images/blueprintBestIcon.png">
+                <!-- div class = "col-md-3 col-centered" style = "text-align: left;"-->
+                <h3>SSDP-1501</h3>
+                <p>Front-End web development: Learn about the powerful and essential HTML5/CSS3 as well as SCSS</p>
+            </div>
+            <div class="col-md-4 col-centered" style="display: inline-block;">
+                <img src="./images/hammerBestIcon.png">
+                <h3>SSDP-2501</h3>
+                <p>Javascript: Learn the robust, flexible and essential language found all over the internet. </p>
+            </div>
+            <div class="col-md-4 col-centered" style="display: inline-block;">
+                <img src="./images/demolitionIcon.png">
+                <h3>SSDP-3501</h3>
+                <p>PHP: become a full stack developer by learning php. You will how to encrypt, process forms and handle other
+                    information.
+                </p>
+            </div>
+
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-4 col-centered" style="display: inline-block">
+                <img src="./images/hammerIcon.png">
+                <!-- div class = "col-md-3 col-centered" style = "text-align: left;"-->
+                <h3>SSDP-4001</h3>
+                <p>Java /& Android SDK: learn the powerful object oriented language Java. As well as how to translate that knowledge
+                    to build Android applications</p>
+            </div>
+            <div class="col-md-4 col-centered" style="display: inline-block;">
+                <img src="./images/paintrollerIcon.png">
+                <h3>SSDP-5001</h3>
+                <p>MEAN: use Mongodb, Express, AngualarJs, and NodeJs to utilize the cutting edge and very powerful MEAN stack</p>
+            </div>
+            <div class="col-md-4 col-centered" style="display: inline-block;">
+                <img src="./images/measureIcon.png">
+                <h3>SSD-00001</h3>
+                <p>Pat Mcgee aka The Binary Gandalf: no other info needed ;)</p>
+            </div>
+        </div>
+        <h3 style="text-align:center;">
+            <a href="https://www.bcit.ca/study/programs/699ccertt#courses">For More info on the Programs Courses</a>
+        </h3>
+    </div>
+    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+
+    <script>
+        /*
+        **********************************************************
+        * OPAQUE NAVBAR SCRIPT
+        **********************************************************
+        */
+        // Toggle tranparent navbar when the user scrolls the page
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50)  /*height in pixels when the navbar becomes non opaque*/ {
+                $('.opaque-navbar').addClass('opaque');
+            } else {
+                $('.opaque-navbar').removeClass('opaque');
+            }
+        });
+        //# sourceURL=pen.js
+    </script>
+
+
+
+</body>
+<!--Footer-->
+<footer class="page-footer center-on-small-only unique-color-dark pt-0">
+
+    <div style="background-color: darkblue;">
+        <div class="container">
+            <!--Grid row-->
+            <div class="row py-4 d-flex align-items-center">
+
+                <!--Grid column-->
+                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                    <h6 class="mb-0 white-text" style='color: white;'>Will B and TheZenDev</h6>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 col-lg-7 text-center text-md-right">
+                    <!--Facebook-->
+                    <a class="icons-sm fb-ic ml-0">
+                        <i class="fa fa-facebook white-text mr-lg-4"> </i>
+                    </a>
+                    <!--Twitter-->
+                    <a class="icons-sm tw-ic">
+                        <i class="fa fa-twitter white-text mr-lg-4"> </i>
+                    </a>
+                    <!--Google +-->
+                    <a class="icons-sm gplus-ic">
+                        <i class="fa fa-google-plus white-text mr-lg-4"> </i>
+                    </a>
+                    <!--Linkedin-->
+                    <a class="icons-sm li-ic">
+                        <i class="fa fa-linkedin white-text mr-lg-4"> </i>
+                    </a>
+                    <!--Instagram-->
+                    <a class="icons-sm ins-ic">
+                        <i class="fa fa-instagram white-text mr-lg-4"> </i>
+                    </a>
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+        </div>
+    </div>
+    <!--Footer Links-->
+    <div class="container mt-5 mb-4 text-center text-md-left">
+        <div class="row mt-3">
+
+            <!--First column-->
+            <div class="col-md-6 col-centered">
+                <h6 class="title font-bold">
+                    <strong>BCIT - SSD</strong>
+                </h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            </div>
+            <!--/.First column-->
+
+            <!--Fourth column-->
+            <div class="col-md-6  col-centered">
+                <h6 class="title font-bold">
+                    <strong>Contact</strong>
+                </h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <i class="fa fa-home mr-3"></i> GitHub - willbcombe</p>
+                <p>
+                    <i class="fa fa-envelope mr-3"></i> GitHub - TheZenDev</p>
+            </div>
+            <!--/.Fourth column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+</footer>
+<!--/.Footer-->
+
+</html>
